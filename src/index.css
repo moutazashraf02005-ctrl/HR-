@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@theme {
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+  --color-brand-red: #FF3B30;
+  --color-panel-bg: #0D0D0D;
+  --color-border-gray: #333;
+}
+
+@layer base {
+  body {
+    background-color: #0A0A0A;
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: #FFFFFF;
+  }
+}
+
+@layer components {
+  .artistic-border {
+    border: 1px solid var(--color-border-gray);
+  }
+  
+  .artistic-header-border {
+    border-bottom: 2px solid var(--color-brand-red);
+  }
+
+  .analysis-list-item {
+    position: relative;
+    padding-left: 15px;
+  }
+
+  .analysis-list-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 1px;
+    background: var(--color-brand-red);
+  }
+}
+
+:root {
+    --background: #0A0A0A;
+    --foreground: #FFFFFF;
+    --card: #0D0D0D;
+    --card-foreground: #FFFFFF;
+    --popover: #0D0D0D;
+    --popover-foreground: #FFFFFF;
+    --primary: #FF3B30;
+    --primary-foreground: #000000;
+    --secondary: #1A1A1A;
+    --secondary-foreground: #FFFFFF;
+    --muted: #1A1A1A;
+    --muted-foreground: #888888;
+    --accent: #1A1A1A;
+    --accent-foreground: #FFFFFF;
+    --destructive: #FF3B30;
+    --border: #333333;
+    --input: #333333;
+    --ring: #FF3B30;
+    --radius: 0px;
+}
